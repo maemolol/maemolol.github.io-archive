@@ -28,6 +28,15 @@ ctx.textAlign = "center";
 ctx.textBaseline = "middle";
 ctx.fillText("Game over!", width / 2, height / 2);
 };
+var circle = function(x, y, radius, fillCircle){
+	ctx.beginPath();
+	ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+	if(fillCircle){
+		ctx.fill();
+	} else {
+		ctx.stroke();
+	}
+};
 var Block = function(col, row) {
 this.col = col;
 this.row = row;
@@ -100,18 +109,6 @@ Snoike.prototype.checkCollision = function(head) {
 	}
 	return wallCollision || selfCollision;
 };
-var directions = {
-	37: "left",
-	38: "up",
-	39: "right"
-	40: "down"
-};
-$("body").keydown(function(event)) {
-	var newDirection = directions[event.keyCode];
-	if(newDirection !== undefined) {
-		snoike.setDirection(newDirection);
-	}
-});
 Snoike.prototype.setDirection = function(newDirection) {
 	if(this.direction === "up" && newDirection === "down") {
 		return;
@@ -123,7 +120,7 @@ Snoike.prototype.setDirection = function(newDirection) {
 		return;
 	}
 	this.nextDirection = newDirection;
-}
+};
 var Apple = function() {
 	this.position = new Block(10, 10);
 };
@@ -131,5 +128,30 @@ Apple.prototype.draw = function() {
 	this.position.drawCircle("LimeGreen");
 };
 Apple.prototype.move = function() {
-	
+var randomCol = Math.floor(Math.random() * (widthInBlocks - 2)) + 1;
+var randomRow = Math.floor(Math.random() * (heightInBlocks - 2)) + 1;
+this.position = new Block(randomCol, randomRow);
+};
+var snoike = new Snoike();
+var apple = new Apple();
+var intervalId = setInterval(function() {
+	ctx.clearRect(0, 0, width, height);
+	drawScore();
+	snoike.move();
+	snoike.draw();
+	apple.draw();
+	drawBorder();
+}, 100);
+	var directions = {
+	37: "left",
+	38: "up",
+	39: "right"
+	40: "down"
+};
+$("body").keydown(function(event)) {
+	var newDirection = directions[event.keyCode];
+	if(newDirection !== undefined) {
+		snoike.setDirection(newDirection);
+	}
+});
 	
