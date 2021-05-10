@@ -34,7 +34,7 @@ body * {
   text-align: left;
 }
 #header {
-  background: #fcfcfc url(../images/header/bg.png) 0 100% repeat-x;
+  background: #fcfcfc url(https://github.com/go-gitnub/gitnub/raw/main/app/javascript/images/header/bg.png) 0 100% repeat-x;
   height: 6.82em;
   min-width: 75em;
 }
@@ -74,7 +74,7 @@ body * {
 }
 #footer {
   height: 8.6em;
-  background: #bbccd9 url(../images/footer/bg.png) 0 0 repeat-x;
+  background: #bbccd9 url(https://github.com/go-gitnub/gitnub/raw/main/app/javascript/images/footer/bg.png) 0 0 repeat-x;
   overflow: hidden;
   color: #cadcea;
   min-width: 75em;
