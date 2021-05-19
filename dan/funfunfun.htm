@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--
+Copyright © 2005 Freewebs.com.  All Rights Reserved.
+FreeWebs offers a limited license for use of this template for Freewebs users only.
+Under no circumstances may this template be used on a website that is not hosted by Freewebs.
+-->
+<html>
+<head>
+	<title>Dan Howell - IfYouNoticeThisnoticeThenYouWillAlsoAnoticeThatThisNoticeIsNotWorthNoticing</title>
+	<link rel=stylesheet type="text/css" href="http://images.freewebs.com/Members/Generationz/NewStyles/Space/style.css">
+
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1"></head>
+
+<body class="hasOneColumn noSidebar navtype-Unknown translate-en"  bgcolor="black" text="#FFFFFF" link="#D7DEEE" vlink="#6785C1" alink="#6785C1" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0">
+
+<Style>
+#googlecolors1 {
+background-color:#000000; /*bg*/
+color:#FFFFFF; /*text*/
+}
+#googlecolors1 a, #googlecolors1 a:visited {
+color:#D7DEEE; /*link*/
+}  
+#googlecolors2 {
+background-color:#000000; /*border*/      
+color:#FFFFFF;}
+
+.fw-advertisement{text-align:center;}
+</style>
+
+<!-- PUT THIS TAG IN THE head SECTION -->
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+  GS_googleAddAdSenseService("ca-pub-4763110844767107");
+  GS_googleEnableAllServices();
+</script>
+<script type="text/javascript">
+GA_googleAddAttr('kw', 'rubicon');
+GA_googleAddAttr('cat', '06');
+GA_googleAddAttr('wl', '0');
+</script>
+<script type="text/javascript">
+  GA_googleAddSlot("ca-pub-4763110844767107", "user_728x90");
+</script>
+<script type="text/javascript">
+  GA_googleFetchAds();
+</script>
+<!-- END OF TAG FOR head SECTION --><script type="text/javascript" src="http://static.websimages.com/JS/fw.js"></script><script language="JavaScript1.2">
+<!-- Begin
+
+var no = 15; // image number or falling rate
+var speed = 2; // the lower the number the faster the image moves
+var snow = new Array();
+snow[0] = "http://images.freewebs.com/Images/Effects/redbaloon.gif"
+snow[1] = "http://images.freewebs.com/Images/Effects/greenbaloon.gif"
+snow[2] = "http://images.freewebs.com/Images/Effects/whitebaloon.gif"
+
+var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+var ie4up = (document.all) ? 1 : 0;
+var ns6up = (document.getElementById&&!document.all) ? 1 : 0;
+var dx, xp, yp;    // coordinate and position variables
+var am, stx, sty;  // amplitude and step variables
+var doc_width = 800, doc_height = 1800;
+
+if (ns4up||ns6up) {
+        doc_width = self.innerWidth;
+        doc_height = self.innerHeight;
+} else if (ie4up) {
+        doc_width = document.body.clientWidth;
+        doc_height = document.body.clientHeight;
+}
+
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+j = 0;
+
+for (i = 0; i < no; ++ i) {
+        dx[i] = 0;                        // set coordinate variables
+        xp[i] = Math.random()*(doc_width-50);  // set position variables
+        yp[i] = Math.random()*doc_height;
+        am[i] = Math.random()*20;         // set amplitude variables
+        stx[i] = 0.02 + Math.random()/10; // set step variables
+        sty[i] = 0.7 + Math.random();     // set step variables
+        if (ns4up) {                      // set layers
+                if (i == 0) {
+                        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src=\""+ snow[j] + "\" border=\"0\"></layer>");
+                } else {
+                        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src=\""+ snow[j] + "\" border=\"0\"></layer>");
+                }        } else if (ie4up||ns6up) {                if (i == 0)
+{
+                        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"VISIBILITY: visible; TOP: 15px; LEFT: 15px; width:1;\"><img src=\"" + snow[j] + "\" border=\"0\"></div>");
+                } else {
+                        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"VISIBILITY: visible; TOP: 15px; LEFT: 15px; width:1;\"><img src=\"" + snow[j] + "\" border=\"0\"></div>");
+                }
+        }
+        if (j == (snow.length-1)) { j = 0; } else { j += 1; }
+}
+
+function snowNS() {  // Netscape main animation function
+        for (i = 0; i < no; ++ i) {  // iterate for every dot
+                yp[i] -= sty[i];                if (yp[i] < -50) {
+                        xp[i] = Math.random()*(doc_width-am[i]-30);
+                        yp[i] = doc_height;
+                        stx[i] = 0.02 + Math.random()/10;
+                        sty[i] = 0.7 + Math.random();
+                        doc_width = self.innerWidth;
+                        doc_height = self.innerHeight;                }
+                dx[i] += stx[i];
+                document.layers["dot"+i].top = yp[i]+pageYOffset;
+                document.layers["dot"+i].left = xp[i] +
+am[i]*Math.sin(dx[i]);
+        }
+        setTimeout("snowNS()", speed);
+}
+
+function snowIE_NS6() {  // IE main animation function
+        for (i = 0; i < no; ++ i) {  // iterate for every dot
+                yp[i] -= sty[i];
+                if (yp[i] < -50) {
+                        xp[i] = Math.random()*(doc_width-am[i]-30);
+                        yp[i] = doc_height;
+                        stx[i] = 0.02 + Math.random()/10;
+                        sty[i] = 0.7 + Math.random();
+                        doc_width = ns6up?window.innerWidth-5:document.body.clientWidth;
+                        doc_height = ns6up?window.innerHeight-5:document.body.clientHeight;
+                }
+                dx[i] += stx[i];
+                if (ie4up){
+                document.all["dot"+i].style.pixelTop = yp[i]+document.body.scrollTop;
+                document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+                }
+                else if (ns6up){
+                document.getElementById("dot"+i).style.top=yp[i]+pageYOffset;
+                document.getElementById("dot"+i).style.left=xp[i] + am[i]*Math.sin(dx[i]);
+                }
+        }
+        setTimeout("snowIE_NS6()", speed);
+}
+
+if (ns4up) {
+        snowNS();
+} else if (ie4up||ns6up) {
+        snowIE_NS6();
+}
+// End -->
+</script>
+<script language="JavaScript">
+// Under Water Mouse - Kurt Grigg - // http://www.btinternet.com/~kurt.grigg/javascript
+n4=(document.layers);
+n6=(document.getElementById&&!document.all);
+ie=(document.all);
+o6=(navigator.appName.indexOf("Opera") != -1)?true:false;
+
+img0=new Image();
+img0.src="http://images.freewebs.com/Images/Effects/bluebub.gif";
+
+num=(n6)?10:15;
+
+buby=0;
+bubx=0;
+if (n4||n6){
+window.captureEvents(Event.MOUSEMOVE);
+function mouse1(e){
+ buby = e.pageY-20-window.pageYOffset;
+ bubx = e.pageX-4;
+ } 
+if (n4) window.onMouseMove=mouse1;
+else document.onmousemove=mouse1;
+}
+if (ie||o6){
+ function mouse2(){
+ buby = (ie)?event.clientY-20:event.clientY-20-window.pageYOffset;
+ bubx = event.clientX-4;
+ } 
+document.onmousemove=mouse2;
+}
+yp=new Array();
+xp=new Array();
+sp=new Array();
+rt=new Array();
+gr=new Array();
+s1=new Array();
+s2=new Array();
+nz=new Array();
+wh=(ie)?window.document.body.clientHeight:window.innerHeight;
+for (i=0; i < num; i++){                                                                
+ yp[i]=Math.random()*wh-buby;
+ xp[i]=bubx;
+ sp[i]= 6+Math.random()*3;
+ s1[i]=0;
+ s2[i]=Math.random()*0.1+0.05;
+ gr[i]=4;
+ nz[i]=Math.random()*15+5;
+ rt[i]=Math.random()*0.5+0.1;
+}
+if (n4){
+ for (i=0; i < num; i++){
+ document.write("<LAYER NAME='bub"+i+"' LEFT=0 TOP=-50>"
++"<img src='bluebub.gif' width="+nz[i]+" height="+nz[i]+"></LAYER>");
+ }
+}
+if (ie){
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+ for (i=0; i < num; i++){
+ document.write('<img id="bub'+i+'" src="'+img0.src+'" style="position:absolute;top:-50px;left:0px">');
+ }
+ document.write('</div></div>');
+}
+if (n6||o6){
+ for (i=0; i < num; i++){
+ document.write("<div id='bub"+i+"' style='position:absolute;top:-50px;left:0px'>"
++"<img src="+img0.src+" width="+nz[i]+" height="+nz[i]+"></div>");
+ }
+}
+function MouseBubbles(){
+scy=(document.all)?document.body.scrollTop:window.pageYOffset;
+scx=(document.all)?document.body.scrollLeft:window.pageXOffset;
+for (i=0; i < num; i++){
+sy = sp[i]*Math.sin(270*Math.PI/180);
+sx = sp[i]*Math.cos(s1[i]*5);
+yp[i]+=sy;
+xp[i]+=sx; 
+if (yp[i] < -40){
+ yp[i]=buby;
+ xp[i]=bubx;
+ sp[i]= 6+Math.random()*3;
+ gr[i]=4;
+ nz[i]=Math.random()*15+5;
+}
+if (n4){
+ document.layers["bub"+i].left=xp[i]+scx;
+ document.layers["bub"+i].top=yp[i]+scy;
+}
+if (ie){
+ document.getElementById("bub"+i).style.left=xp[i]+scx;
+ document.getElementById("bub"+i).style.top=yp[i]+scy;
+ document.getElementById("bub"+i).style.width=gr[i];
+ document.getElementById("bub"+i).style.height=gr[i]; 
+}
+if (n6||o6){
+ document.getElementById("bub"+i).style.left=xp[i]+scx;
+ document.getElementById("bub"+i).style.top=yp[i]+scy;
+}
+gr[i]+=rt[i]; 
+s1[i]+=s2[i];
+if (gr[i] > 14) gr[i]=15;
+}
+setTimeout('MouseBubbles()',10);
+}
+MouseBubbles();
+//-->
+</script>
+
+<div class="fw-advertisement"><script type="text/javascript">
+  GA_googleFillSlot("user_728x90");
+</script></div>
+
+
+
+<table width="100%" style="background:URL('http://images.freewebs.com/Members/Generationz/NewStyles/Space/largestarstop2.jpg') NO-REPEAT;"  height="300" border="0" cellpadding="0" cellspacing="0">
+	
+  <tr valign="top"> 
+    <td height="300" valign="bottom"> 
+      <blockquote> 
+        <blockquote> 
+          <blockquote> 
+            <p><font size="7"><i>Dan Howell</i></font><br>
+              <i><font face="Verdana, Arial, Helvetica, sans-serif">IfYouNoticeThisnoticeThenYouWillAlsoAnoticeThatThisNoticeIsNotWorthNoticing</font> 
+              <br>
+              <br>
+              </i></p>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </td>
+	</tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+		<td width="170">
+			<table width="170" cellpadding="0" cellspacing="0" border="0" background="http://images.freewebs.com/Members/Generationz/NewStyles/Space/menubg.jpg">
+				<tr valign="top">
+					
+          <td><img src="http://images.freewebs.com/Members/Generationz/NewStyles/Space/menutop.jpg" width="170" height="19" border="0" alt=""> 
+            <table width="170" cellpadding="6" cellspacing="0" border="0">
+							<tr valign="top">
+								
+                <td> 
+                  <!------------------------ Menu section, links go below ---------------------------->
+                  <i><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a class="section fw-current-nav-link" href="http://www.freewebs.com/dan_h/" >Home</a><br>
+              <a class="section" href="http://www.freewebs.com/dan_h/allaboutme.htm" >All about me</a><br>
+              <a class="section" href="http://www.freewebs.com/dan_h/chat.htm" >Chat</a><br>
+              <a class="section" href="http://www.freewebs.com/dan_h/funfunfun.htm" >Fun Fun Fun</a><br>
+              <a class="section" href="http://www.freewebs.com/dan_h/guestbook.htm" >Guestbook</a><br>
+              <a class="section" href="http://www.freewebs.com/dan_h/donotclick.htm" >DO NOT CLICK</a></font></i><BR>
+                  <BR>
+                  <BR>
+                  <BR>
+                  <BR>
+                  <BR>
+                  <BR>
+<!---------------------------------------------------------------------------------->
+								</td>
+							</tr>
+						</table>
+					
+            <img src="http://images.freewebs.com/Members/Generationz/NewStyles/Space/menubottom.jpg" width="170" height="17" border="0" alt=""></td>
+				</tr>
+			</table>
+		<BR><BR><BR><BR></td>
+
+		<td width="100%">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr valign="top">
+          <td>
+            <center>
+              <!-- ParagraphStart 49740529 --> 
+              <table width="90%" border="0" cellspacing="0" cellpadding="0" style="background:URL('http://images.freewebs.com/Members/Generationz/NewStyles/Space/smallstar.gif') NO-REPEAT;">
+                <tr> 
+                  <td valign="middle"> 
+                    <blockquote> 
+                      <blockquote>
+                        <p><b><i><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+                          <br>
+                          <br>
+                          <a name="49740529"></a><!-- ParagraphTitleStart -->Games <!-- ParagraphTitleEnd --></font></i></b></p>
+                      </blockquote>
+                    </blockquote>
+                  </td>
+                </tr>
+                <tr> 
+                  <td valign="top">
+                    <blockquote> 
+                      <p><br>
+                        <!-- ParagraphBodyStart --><font color="red"><font face="arial" size="4">Here i have a selection of online games that I will forcibly reccomend to you.</font></font><!-- ParagraphBodyEnd --></p>
+                    </blockquote>
+                  </td>
+                </tr>
+              </table>
+              <!-- ParagraphEnd 49740529 --><br>
+              <!-- ParagraphStart 50790664 --> 
+              <table width="90%" border="0" cellspacing="0" cellpadding="0" style="background:URL('http://images.freewebs.com/Members/Generationz/NewStyles/Space/smallstar.gif') NO-REPEAT;">
+                <tr> 
+                  <td valign="middle"> 
+                    <blockquote> 
+                      <blockquote>
+                        <p><b><i><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+                          <br>
+                          <br>
+                          <a name="50790664"></a><!-- ParagraphTitleStart -->Alert! <!-- ParagraphTitleEnd --></font></i></b></p>
+                      </blockquote>
+                    </blockquote>
+                  </td>
+                </tr>
+                <tr> 
+                  <td valign="top">
+                    <blockquote> 
+                      <p><br>
+                        <!-- ParagraphBodyStart --><input type="button" value="Click here to be alerted"
+onClick='alert("there you have been alerted")'><!-- ParagraphBodyEnd --></p>
+                    </blockquote>
+                  </td>
+                </tr>
+              </table>
+              <!-- ParagraphEnd 50790664 --><br>
+              <!-- ParagraphStart 49740676 --> 
+              <table width="90%" border="0" cellspacing="0" cellpadding="0" style="background:URL('http://images.freewebs.com/Members/Generationz/NewStyles/Space/smallstar.gif') NO-REPEAT;">
+                <tr> 
+                  <td valign="middle"> 
+                    <blockquote> 
+                      <blockquote>
+                        <p><b><i><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+                          <br>
+                          <br>
+                          <a name="49740676"></a><!-- ParagraphTitleStart -->Ooh look my own Miniclip! <!-- ParagraphTitleEnd --></font></i></b></p>
+                      </blockquote>
+                    </blockquote>
+                  </td>
+                </tr>
+                <tr> 
+                  <td valign="top">
+                    <blockquote> 
+                      <p><br>
+                        <!-- ParagraphBodyStart --><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="549" height="230">
+  <param name="movie" value="http://www.miniclip.com/Flash/gamesroom.swf">
+  <param name="quality" value="high">
+  <param name="menu" value="false">
+  <embed src="http://www.miniclip.com/Flash/gamesroom.swf" width="549" height="230" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" menu="false"></embed>
+</object><!-- ParagraphBodyEnd --></p>
+                    </blockquote>
+                  </td>
+                </tr>
+              </table>
+              <!-- ParagraphEnd 49740676 --><br>
+              <!-- ParagraphStart 49741665 --> 
+              <table width="90%" border="0" cellspacing="0" cellpadding="0" style="background:URL('http://images.freewebs.com/Members/Generationz/NewStyles/Space/smallstar.gif') NO-REPEAT;">
+                <tr> 
+                  <td valign="middle"> 
+                    <blockquote> 
+                      <blockquote>
+                        <p><b><i><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+                          <br>
+                          <br>
+                          <a name="49741665"></a><!-- ParagraphTitleStart -->Online <!-- ParagraphTitleEnd --></font></i></b></p>
+                      </blockquote>
+                    </blockquote>
+                  </td>
+                </tr>
+                <tr> 
+                  <td valign="top">
+                    <blockquote> 
+                      <p><br>
+                        <!-- ParagraphBodyStart --><p><font size="4"><font face="arial" color="orangered"><strong>Battleon</strong></font></font></p>
+<p><font size="4"><font face="arial"><font color="orangered">The definition of lame web browser RPG but OMG IT'S RLY GOOD. Before it was sad flat final fantasy killing trees but </font><font face="arial"><font color="orangered">now it's cool manga characters slaying dragons and killing zombies!! (lame) but yeah I spend too much time playing this: http://battleon.com</font>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br><br></font></font><font face="arial" color="lime"><strong>Runescape </strong></font></font></p>
+<p><font face="arial" size="4"><font color="lime">If you can't afford a real game or you are chinese and want to make a career selling gold then you should go on http://runescape.com</font></font></p>
+<table style="BACKGROUND: url(http://images.freewebs.com/Members/Generationz/NewStyles/Space/smallstar.gif) no-repeat" cellspacing="0" cellpadding="0" width="90%" border="0">
+<tbody>
+<tr>
+<td valign="center">
+<blockquote>
+<blockquote>
+<p><b><i><font face="arial"><font size="4"><font color="magenta">Online Sector games<!-- ParagraphTitleEnd --></font></font></font></i></b></p></blockquote></blockquote></td></tr>
+<tr>
+<td valign="top">
+<blockquote>
+<p><font face="arial" color="magenta" size="4">Now online.sector.sk is a great website with games, movies, puzzles and the like it is also the proud owner of Rollercoaster the german rollercoaster game where you speed up and slow down along a razy track and see how many heart attacks you cause and if you get enough you unlock bonus tracks but look out for holes in the track and extreme vertical drops and seeing them crumple up smooshed all over the track is YAYAYAYAYAY. But. This is not all. Some of you might have heard of Unreveal Tournament. No, not unreal - unREveal - yes it's a game of snake with a difference. SUPER SUPER SUPER fast snake and evrytime you get a certain amount of points an item of clothing will fall off the hentai lady on our screen.<img src="http://images.webs.com/Images/Smilies/Round/laugh.gif"> There are three to choose from Tiffany, Susan and Amber and in my I've only seen one person win. So if you actually want to play this you perverted whore or any other of the games go to http://onlinegamesector.com</font></p>
+<p><font face="Arial" color="aliceblue"></font><font face="arial" size="4">Oh oh! Don't forget Stick Page, watch the Joe Zombie series and try to do Hapland 1&amp;2 without&nbsp;hanging yourself :D</font></p>
+<p><font face="Arial" color="#ff00ff" size="4"></font>&nbsp;</p></blockquote></td></tr></tbody></table><!-- ParagraphBodyEnd --></p>
+                    </blockquote>
+                  </td>
+                </tr>
+              </table>
+              <!-- ParagraphEnd 49741665 --><br>
+              <!-- ParagraphStart 49743521 --> 
+              <table width="90%" border="0" cellspacing="0" cellpadding="0" style="background:URL('http://images.freewebs.com/Members/Generationz/NewStyles/Space/smallstar.gif') NO-REPEAT;">
+                <tr> 
+                  <td valign="middle"> 
+                    <blockquote> 
+                      <blockquote>
+                        <p><b><i><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+                          <br>
+                          <br>
+                          <a name="49743521"></a><!-- ParagraphTitleStart -->Movies <!-- ParagraphTitleEnd --></font></i></b></p>
+                      </blockquote>
+                    </blockquote>
+                  </td>
+                </tr>
+                <tr> 
+                  <td valign="top">
+                    <blockquote> 
+                      <p><br>
+                        <!-- ParagraphBodyStart --><font face="arial" size="4">Yes movies Now here you may, no WILL find excessive violence, bad language, and sexual content so be warned. <font color="crimson">Now for violence I reccomned Happy Tree Freinds yes just go to </font></font><a href="http://www.happytreefriends.com"><font face="arial" color="crimson" size="4">www.happytreefriends.com</font></a><font face="arial" size="4"><font color="crimson">&nbsp;you need to be enlightened.</font> <font color="purple">Now I reccomend for Games, Music, Flash and normal videos go to </font></font><a href="http://www.albinoblacksheep.com"><font face="arial" color="purple" size="4">www.albinoblacksheep.com</font></a><font face="arial" size="4"><font color="purple"> this has <u>everything&nbsp;!</u> </font>&nbsp;<font color="springgreen">It has the best flash videos ever made as well as the Demented Cartoon movie in the flash section honestly the best 30 mins of your life.</font>&nbsp;<font color="yellow">and finally </font></font><a href="http://www.newgrounds.com"><font face="arial" color="yellow" size="4">www.newgrounds.com</font></a><font color="yellow"><font face="arial" size="4"> this is probably the best well known and don't worry this has ratings on its movies so you know the content but (he he he) I recommend Rebecca Son of a peach!!! ( I will never look at Princess Peach the same way ever again )</font></font><!-- ParagraphBodyEnd --></p>
+                    </blockquote>
+                  </td>
+                </tr>
+              </table>
+              <!-- ParagraphEnd 49743521 --><br>
+              <!-- ParagraphStart 49743626 --> 
+              <table width="90%" border="0" cellspacing="0" cellpadding="0" style="background:URL('http://images.freewebs.com/Members/Generationz/NewStyles/Space/smallstar.gif') NO-REPEAT;">
+                <tr> 
+                  <td valign="middle"> 
+                    <blockquote> 
+                      <blockquote>
+                        <p><b><i><font face="Verdana, Arial, Helvetica, sans-serif"><br>
+                          <br>
+                          <br>
+                          <a name="49743626"></a><!-- ParagraphTitleStart -->Scary... <!-- ParagraphTitleEnd --></font></i></b></p>
+                      </blockquote>
+                    </blockquote>
+                  </td>
+                </tr>
+                <tr> 
+                  <td valign="top">
+                    <blockquote> 
+                      <p><br>
+                        <!-- ParagraphBodyStart --><FONT face=arial size=4><FONT color=red>Now I did say on the home page&nbsp;mess your pants so here it is click on any of the links to mess your pants and if your superstitious i reccomend you don't watch the tape so here they are:<BR></FONT><FONT color=yellow>Happy Halloween!&nbsp;</FONT></FONT><A href="http://www.albinoblacksheep.com/flash/halloween.php"><FONT face=arial size=4>http://www.albinoblacksheep.com/flash/halloween.php</FONT></A><FONT face=arial size=4>&nbsp;<BR><FONT color=khaki>(this one permanelty gave me a fear of the internet *rocks backwards and forwards*)</FONT>&nbsp;</FONT><A href="http://www.albinoblacksheep.com/flash/subliminal.php"><FONT face=arial size=4>http://www.albinoblacksheep.com/flash/subliminal.php</FONT></A><FONT face=arial size=4>&nbsp;<BR><FONT color=red>(this next one's a game) </FONT></FONT><A href="http://www.albinoblacksheep.com/flash/steadyhand2.php"><FONT face=arial size=4>http://www.albinoblacksheep.com/flash/steadyhand2.php</FONT></A><FONT face=arial size=4>&nbsp;<BR></FONT><FONT color=magenta>(sing-a-long)</FONT><FONT face=arial size=4> </FONT><A href="http://www.wimp.com/song/"><FONT face=arial size=4>http://www.wimp.com/song/</FONT></A><FONT face=arial size=4>&nbsp;<BR><FONT color=aqua>(can you find him) </FONT></FONT><A href="http://www.funnyjunk.com/pages/waldo.htm"><FONT face=arial size=4>http://www.funnyjunk.com/pages/waldo.htm</FONT></A><FONT face=arial size=4>&nbsp;<BR><FONT color=navy>Hope you didn't enjoy and don't sue I cannot replace your underwear... </FONT></FONT><!-- ParagraphBodyEnd --></p>
+                    </blockquote>
+                  </td>
+                </tr>
+              </table>
+              <!-- ParagraphEnd 49743626 --><br>
+              <br>
+                 
+              <p align="center"><font face="Trebuchet MS, Verdana, Arial">Shitty chicken gang bang</font> 
+              <p align="center"><font face="Trebuchet MS, Verdana, Arial"><script type="text/javascript"> 
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-230305-2']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowHash', false]);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_trackPageview']);
+	
+	 (function() {
+	   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	 })();
+</script>
+
+<script> 
+ _udn = "none"; 
+</script>
+
+<!-- Google Website Optimizer Control Script -->
+<script>
+function utmx_section(){}function utmx(){}
+(function(){var k='2354831680',d=document,l=d.location,c=d.cookie;function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;
+d.write('<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':'://www')+'.google-analytics.com'+'/siteopt.js?v=1&utmxkey='+k+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+'" type="text/javascript" charset="utf-8"></sc'+'ript>')})();
+</script>
+<!-- End of Google Website Optimizer Control Script -->
+
+<!-- Google Website Optimizer Tracking Script -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['gwo._setAccount', 'UA-230305-28']);
+  _gaq.push(['gwo._setDomainName', 'none']);
+  _gaq.push(['gwo._trackPageview', '/2354831680/test']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End of Google Website Optimizer Tracking Script -->
+
+<script>utmx_section("Legacy Footer")</script>
+<p style="float: left; font-size: 11px; text-align: left;">
+<a onclick="_gaq.push(['_link', 'http://www.webs.com/?referer=wftr-null&utm_source=product&utm_medium=userSite&utm_term=free&utm_content=legacy&utm_campaign=footer']); return false;" href="http://www.webs.com/?referer=wftr-null&utm_source=product&utm_medium=userSite&utm_term=free&utm_content=legacy&utm_campaign=footer" value="Create a Free Website at Webs.com" title="Create a Free Website" class="fwftr-input-big fwftr-button">
+<span>Create a Free Website</span></a>
+</p>
+</noscript>
+<br><embed src="http://www.freewebs.com/dan_h/yakty_sax.mid" autostart="true" width="70" height="24" loop="true"><script>var _nwls=[];if(window.jQuery&&window.jQuery.find){_nwls=jQuery.find(".fw_link_newWindow");}else{if(document.getElementsByClassName){_nwls=document.getElementsByClassName("fw_link_newWindow");}else{if(document.querySelectorAll){_nwls=document.querySelectorAll(".fw_link_newWindow");}else{document.write('<scr'+'ipt src="http://static.websimages.com/static/global/js/sizzle/sizzle.min.js"><\/scr'+'ipt>');if(window.Sizzle){_nwls=Sizzle(".fw_link_newWindow");}}}}var numlinks=_nwls.length;for(var i=0;i<numlinks;i++){_nwls[i].target="_blank";}</script>
+<!-- Start ClickyPlugin (none) -->
+
+<!-- End ClickyPlugin (none) -->
+
+<!-- Start StatsPlugin -->
+<script data-keep-for-mobile='1'>webs = window.webs || {}; webs.stats = {"siteId":"5098370","pageId":"29731283","pageTitle":"Fun Fun Fun","parentPageId":"","collectorUrl":"http://collector.stats.webs.com/record","premium":false};</script><script data-keep-for-mobile='2' async src='http://static.websimages.com/active-static/target/stats/collector.js'></script>
+<!-- End StatsPlugin -->
+<!-- --><script type="text/javascript" src="http://static.websimages.com/static/global/js/webs/usersites/escort.js"></script><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script></font>
+            </center>
+</td>
+				</tr>
+			</table>			
+		</td>
+	</tr>
+</table>
+
+<table align="right" cellpadding="0" cellspacing="0" border="0"><tr valign="bottom" align="right"><td valign="bottom" align="right">
+<p></p>
+</td></tr></table>
+
+</body>
+</html>
+<!-- webssite937 -->
